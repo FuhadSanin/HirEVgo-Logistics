@@ -12,6 +12,7 @@ import { Input } from "../../components/ui/input"
 import { Button } from "../../components/ui/button"
 import { SendHorizonal } from "lucide-react"
 import { CardDescription } from "@components/ui/card"
+import { MapPin, Phone, Mail } from "lucide-react"
 
 const Contact = () => {
   // Initialize react-hook-form
@@ -125,18 +126,22 @@ const Contact = () => {
             </Form>
           </div>
           <div className="lg:w-1/3 w-full mt-10 lg:mt-0 lg:ml-8">
-            <div className="p-6 h-full border-2 flex flex-col justify-center border-r-0 border-t-0 border-b-0">
-              <h2 className="text-lg font-semibold title-font text-gray-900">
+            <div className="p-6 h-full flex flex-col justify-center space-y-5">
+              <h2 className="text-lg font-bold title-font text-gray-900">
                 Contact Details
               </h2>
-              <p className="mt-4 text-base leading-relaxed text-gray-700">
-                <strong>Address:</strong> 1234 Street Name, City, State, 56789
+              <p className="mt-4 text-md leading-relaxed text-gray-700 flex items-center">
+                <MapPin size={60} className="mr-4" />
+                V/ 314, Opp. Kerala Judicial Academy, Athani, Chengamanad Road,
+                Nedumbasserry, Ernakulam, Kerala -683585.
               </p>
-              <p className="mt-2 text-base leading-relaxed text-gray-700">
-                <strong>Phone:</strong> (123) 456-7890
+              <p className="mt-2 text-base leading-relaxed text-gray-700 flex items-center">
+                <Phone size={20} className="mr-4" />
+                (123) 456-7890
               </p>
-              <p className="mt-2 text-base leading-relaxed text-gray-700">
-                <strong>Email:</strong> office@hirevgo.com
+              <p className="mt-2 text-base leading-relaxed text-gray-700 flex items-center">
+                <Mail className="mr-4" size={20} />
+                office@hirevgo.com
               </p>
             </div>
           </div>

@@ -1,7 +1,8 @@
 import React from "react"
-import tech from "../../assets/image.png"
+import vehicle from "../../assets/Partner/1.png"
 import { Button } from "../../components/ui/button"
 import { CardDescription } from "@components/ui/card"
+import JoinUs from "./JoinUs"
 
 const Partner = () => {
   return (
@@ -9,7 +10,7 @@ const Partner = () => {
       <div className="w-full flex flex-col lg:flex-row items-center justify-evenly container h-fit rounded-3xl space-y-10 lg:space-y-0 lg:space-x-16">
         <div className="w-full lg:w-1/2">
           <img
-            src={tech}
+            src={vehicle}
             className="rounded-3xl shadow-lg w-full h-auto object-cover"
             alt="Partner with us"
           />
@@ -26,7 +27,7 @@ const Partner = () => {
             services for our clients. Let’s drive the future of logistics, one
             electric mile at a time!
           </CardDescription>
-          <Button>Join us</Button>
+          <JoinUs />
         </div>
       </div>
     </section>

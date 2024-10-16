@@ -41,8 +41,8 @@ const cardData = [
 const Cards = ({ title, description, imgSrc: Icon }) => {
   return (
     <Card>
-      <CardContent className="p-8">
-        <Icon size={50} className="mb-3" strokeWidth={1.5} />
+      <CardContent className="p-6">
+        <Icon size={50} className="mb-3" strokeWidth={1.3} />
         <CardTitle className="mb-3 mt-3 leading-tight">{title}</CardTitle>{" "}
         <CardDescription className="text-justify">
           {description}
@@ -56,7 +56,7 @@ const Vision = () => {
   return (
     <section className="overflow-hidden h-fit pb-12 md:px-24 bg-white dark:bg-dark">
       <div className="container mx-auto">
-        <div className="flex-wrap flex items-center justify-between -mx-4">
+        <div className="flex-wrap flex items-center justify-between -mx-4 space-y-8">
           <div className="flex flex-row flex-wrap lg:w-1/2 md:w-full sm:justify-between justify-center gap-12">
             {cardData.map(card => (
               <Cards
@@ -67,8 +67,14 @@ const Vision = () => {
               />
             ))}
           </div>
-          <div className="lg:w-1/2 md:w-full h-screen flex justify-center items-center">
-            <img src="" alt="map.png" />
+          <div className="lg:w-1/2 md:w-full flex justify-center items-center rounded-xl">
+            <iframe
+              title="HireEVgo Location"
+              className="rounded-lg w-[500px] h-[400px]"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3927.3069364819326!2d76.3527867793513!3d10.15568674745637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0805222a280ba1%3A0xa16e89cca149dbd7!2sHirevgo!5e0!3m2!1sen!2sin!4v1729097750549!5m2!1sen!2sin"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
           </div>
         </div>
       </div>

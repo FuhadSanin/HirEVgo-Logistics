@@ -1,36 +1,27 @@
-import React from "react"
+import { CardDescription } from "@components/ui/card"
+import about1 from "../../assets/About/1.webp"
+import about2 from "../../assets/About/2.webp"
+import about3 from "../../assets/About/3.webp"
 
 const About = () => {
   return (
     <>
-      <section className="overflow-hidden pt-20 pb-12 md:px-24 px-10 lg:pt-[120px] lg:pb-[90px] bg-white dark:bg-dark">
+      <section className="overflow-hidden pt-28 pb-12 md:px-24 px-10 lg:pt-[120px] lg:pb-[90px] bg-white dark:bg-dark">
         <div className="container mx-auto">
           <div className="flex flex-wrap items-center justify-between -mx-4">
             <div className="w-full px-4 lg:w-6/12">
               <div className="flex items-center -mx-3 sm:-mx-4">
                 <div className="w-full px-3 sm:px-4 xl:w-1/2">
                   <div className="py-3 sm:py-4">
-                    <img
-                      src="https://i.ibb.co/gFb3ns6/image-1.jpg"
-                      alt=""
-                      className="w-full rounded-2xl"
-                    />
+                    <img src={about1} alt="" className="w-full rounded-2xl" />
                   </div>
                   <div className="py-3 sm:py-4">
-                    <img
-                      src="https://i.ibb.co/rfHFq15/image-2.jpg"
-                      alt=""
-                      className="w-full rounded-2xl"
-                    />
+                    <img src={about2} alt="" className="w-full rounded-2xl" />
                   </div>
                 </div>
                 <div className="w-full px-3 sm:px-4 xl:w-1/2">
                   <div className="relative z-10 my-4">
-                    <img
-                      src="https://i.ibb.co/9y7nYCD/image-3.jpg"
-                      alt=""
-                      className="w-full rounded-2xl"
-                    />
+                    <img src={about3} alt="" className="w-full rounded-2xl" />
                     <span className="absolute -right-7 -bottom-7 z-[-1]">
                       <svg
                         width={134}
@@ -611,15 +602,15 @@ const About = () => {
                 <h2 className="mb-5 text-3xl font-bold text-black  sm:text-[40px]/[48px]">
                   Let’s move your Business forward together!
                 </h2>
-                <p className="mb-5 text-base text-body-color dark:text-dark-6">
+                <CardDescription className="mb-5 text-md">
                   At HirEVgo, we specialize in delivering seamless logistics and
                   transportation solutions tailored to meet the unique needs of
                   our clients. With a commitment to reliability and efficiency,
                   our team combines cutting-edge technology with industry
                   expertise to ensure your goods reach their destination safely
                   and on time.
-                </p>
-                <p className="mb-8 text-base text-body-color dark:text-dark-6">
+                </CardDescription>
+                <CardDescription className="mb-8 text-md">
                   Founded on the principles of integrity and customer-centric
                   service, HirEVgo has quickly become a trusted partner for
                   businesses across various sectors. Our diverse fleet of
@@ -627,7 +618,7 @@ const About = () => {
                   everything from small packages to large freight shipments, all
                   while maintaining the highest standards of safety and
                   compliance.
-                </p>
+                </CardDescription>
               </div>
             </div>
           </div>
