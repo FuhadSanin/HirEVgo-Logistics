@@ -2,6 +2,7 @@ import { CardDescription } from "@components/ui/card"
 import about1 from "../../assets/About/1.webp"
 import about2 from "../../assets/About/2.webp"
 import about3 from "../../assets/About/3.webp"
+import GetQuota from "@pages/Pricing/GetQuota"
 
 const About = () => {
   return (
@@ -13,15 +14,27 @@ const About = () => {
               <div className="flex items-center -mx-3 sm:-mx-4">
                 <div className="w-full px-3 sm:px-4 xl:w-1/2">
                   <div className="py-3 sm:py-4">
-                    <img src={about1} alt="" className="w-full rounded-2xl" />
+                    <img
+                      src={about1}
+                      alt=""
+                      className="w-full rounded-2xl shadow-lg"
+                    />
                   </div>
                   <div className="py-3 sm:py-4">
-                    <img src={about2} alt="" className="w-full rounded-2xl" />
+                    <img
+                      src={about2}
+                      alt=""
+                      className="w-full rounded-2xl shadow-lg"
+                    />
                   </div>
                 </div>
                 <div className="w-full px-3 sm:px-4 xl:w-1/2">
                   <div className="relative z-10 my-4">
-                    <img src={about3} alt="" className="w-full rounded-2xl" />
+                    <img
+                      src={about3}
+                      alt=""
+                      className="w-full rounded-2xl shadow-lg"
+                    />
                     <span className="absolute -right-7 -bottom-7 z-[-1]">
                       <svg
                         width={134}
@@ -603,7 +616,7 @@ const About = () => {
                   Let’s move your Business forward together!
                 </h2>
                 <CardDescription className="mb-5 text-md">
-                  At HirEVgo, we specialize in delivering seamless logistics and
+                  At hirEVgo, we specialize in delivering seamless logistics and
                   transportation solutions tailored to meet the unique needs of
                   our clients. With a commitment to reliability and efficiency,
                   our team combines cutting-edge technology with industry
@@ -619,6 +632,7 @@ const About = () => {
                   while maintaining the highest standards of safety and
                   compliance.
                 </CardDescription>
+                <GetQuota />
               </div>
             </div>
           </div>

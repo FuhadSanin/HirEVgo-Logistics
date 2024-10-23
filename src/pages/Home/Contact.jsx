@@ -13,10 +13,22 @@ import { Button } from "../../components/ui/button"
 import { SendHorizonal } from "lucide-react"
 import { CardDescription } from "@components/ui/card"
 import { MapPin, Phone, Mail } from "lucide-react"
+import { useToast } from "@components/ui/use-toast"
+import { z } from "zod"
+import { zodResolver } from "@hookform/resolvers/zod"
 
 const Contact = () => {
+  const { toast } = useToast()
   // Initialize react-hook-form
+  const formSchema = z.object({
+    name: z.string().min(1),
+    email: z.string().email(),
+    subject: z.string().min(1),
+    message: z.string().min(1),
+  })
+
   const form = useForm({
+    resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
       email: "",
@@ -27,11 +39,30 @@ const Contact = () => {
 
   const onSubmit = data => {
     console.log(data)
+    if (!data.name || !data.email || !data.subject || !data.message) {
+      toast({
+        title: "Error: Empty fields",
+        description: "Please fill all the fields",
+        variant: "destructive",
+      })
+      return
+    }
+
+    toast({
+      title: "Message Sent",
+      description: "We will connect with you soon",
+      variant: "success",
+    })
+
+    form.reset()
   }
 
   return (
-    <section className="overflow-hidden pb-12 pt-12 md:px-24 px-10 ">
-      <div className="container px-5 py-14 mx-auto">
+    <section
+      id="Contact"
+      className="overflow-hidden pb-12 pt-12 md:px-24 px-10"
+    >
+      <div className="container md:px-5 py-14  mx-auto">
         <div className="flex flex-col text-center w-full mb-12">
           <h1 className="sm:text-3xl text-2xl font-semibold title-font mb-4 text-gray-900">
             Contact Us
@@ -58,7 +89,6 @@ const Contact = () => {
                       <FormControl>
                         <Input placeholder="Your Name" {...field} />
                       </FormControl>
-                      <FormMessage />
                     </FormItem>
                   )}
                 />
@@ -76,7 +106,6 @@ const Contact = () => {
                           {...field}
                         />
                       </FormControl>
-                      <FormMessage />
                     </FormItem>
                   )}
                 />
@@ -94,7 +123,6 @@ const Contact = () => {
                           {...field}
                         />
                       </FormControl>
-                      <FormMessage />
                     </FormItem>
                   )}
                 />
@@ -111,7 +139,6 @@ const Contact = () => {
                           className="w-full text-sm bg-opacity-50 rounded border border-gray-300 focus:border-black-500 focus:bg-white focus:ring-2 focus:ring-black h-32  outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
                         />
                       </FormControl>
-                      <FormMessage />
                     </FormItem>
                   )}
                 />

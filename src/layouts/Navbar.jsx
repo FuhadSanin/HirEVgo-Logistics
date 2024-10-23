@@ -1,11 +1,13 @@
 import React, { useState } from "react"
-import { Menu, X } from "lucide-react" // Ensure you import the Menu icon if you intend to use it
+import { List, Menu, X } from "lucide-react" // Ensure you import the Menu icon if you intend to use it
 import logo from "../assets/logo.png"
+import { Link } from "react-router-dom"
 
 const Navbar = () => {
   const navigation = [
-    { name: "Home", href: "#" },
-    { name: "Pricing", href: "#" },
+    { name: "Home", to: "" },
+    { name: "Pricing", to: "pricing" },
+    { name: "Contact Us", to: "contact" },
   ]
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -18,7 +20,7 @@ const Navbar = () => {
       >
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
-            <img alt="Company Logo" src={logo} className="h-24 w-auto" />
+            <img alt="Company Logo" src={logo} className="h-28 w-auto" />
           </a>
         </div>
 
@@ -34,24 +36,17 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Desktop Navigation Links */}
+        {/* Contact Us Link */}
         <div className="hidden lg:flex lg:gap-x-12">
           {navigation.map(item => (
-            <a
+            <Link
               key={item.name}
-              href={item.href}
+              to={item.to}
               className="text-md font-semibold leading-6"
             >
               {item.name}
-            </a>
+            </Link>
           ))}
-        </div>
-
-        {/* Contact Us Link */}
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-sm font-semibold leading-6">
-            Contact us <span aria-hidden="true">&rarr;</span>
-          </a>
         </div>
       </nav>
 
@@ -67,13 +62,13 @@ const Navbar = () => {
           <div className="flex flex-col w-full text-center gap-y-6">
             {navigation.map(item => (
               <>
-                <a
+                <List
                   key={item.name}
-                  href={item.href}
+                  to={item.to}
                   className="text-xl font-semibold"
                 >
                   {item.name}
-                </a>
+                </List>
                 <hr className="w-full" />
               </>
             ))}

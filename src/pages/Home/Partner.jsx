@@ -6,7 +6,7 @@ import JoinUs from "./JoinUs"
 
 const Partner = () => {
   return (
-    <section className="overflow-hidden pb-12 pt-12 md:px-24 px-10 bg-[#f0f8ff] ">
+    <section className="overflow-hidden pb-12 pt-12 md:px-24 px-10 bg-[#f0f8ff] rounded-3xl">
       <div className="w-full flex flex-col lg:flex-row items-center justify-evenly container h-fit rounded-3xl space-y-10 lg:space-y-0 lg:space-x-16">
         <div className="w-full lg:w-1/2">
           <img
