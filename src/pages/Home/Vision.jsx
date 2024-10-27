@@ -40,7 +40,7 @@ const cardData = [
 
 const Cards = ({ title, description, imgSrc: Icon }) => {
   return (
-    <Card>
+    <Card className="rounded-3xl">
       <CardContent className="p-6">
         <Icon size={50} className="mb-3" strokeWidth={1.3} />
         <CardTitle className="mb-3 mt-3 leading-tight">{title}</CardTitle>{" "}
@@ -67,7 +67,7 @@ const Vision = () => {
               />
             ))}
           </div>
-          <div className="lg:w-1/2 md:w-full flex justify-center items-center rounded-xl">
+          <div className="lg:w-1/2 md:w-full flex justify-center items-center rounded-3xl">
             <iframe
               title="HireEVgo Location"
               className="rounded-lg w-[500px] h-[400px]"

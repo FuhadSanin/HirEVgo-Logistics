@@ -1,5 +1,5 @@
 import React from "react"
-import pricing from "../../assets/pricing.png"
+import pricing from "../../assets/pricing.jpg"
 import { useForm } from "react-hook-form"
 import {
   Form,
@@ -7,14 +7,11 @@ import {
   FormItem,
   FormLabel,
   FormControl,
-  FormMessage,
 } from "../../components/ui/form"
 import { Input } from "../../components/ui/input"
 import { Button } from "../../components/ui/button"
 import { SendHorizonal } from "lucide-react"
 import { CardDescription } from "@components/ui/card"
-import { MapPin, Phone, Mail } from "lucide-react"
-import { useToast } from "@components/ui/use-toast"
 import { z } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
 
@@ -41,14 +38,10 @@ const Pricing = () => {
   }
 
   return (
-    <section className="overflow-hidden pt-28 pb-12 md:px-24 px-10 lg:pt-[120px] lg:pb-[90px] bg-white dark:bg-dark">
-      <div className="container mx-auto md:flex justify-center items-center space-y-6">
-        <div className="md:w-1/2 flex items-center justify-center">
-          <img
-            src={pricing}
-            alt=""
-            className="w-[500px] rounded-xl shadow-md"
-          />
+    <section className="overflow-hidden pt-28 pb-12 md:px-10 px-10 lg:pt-[120px] lg:pb-[90px] bg-white dark:bg-dark">
+      <div className="container mx-auto md:flex justify-between items-center space-y-6">
+        <div className="md:w-1/2 lg:1/2 flex items-center justify-center">
+          <img src={pricing} alt="" className="w-[500px]" />
         </div>
         <div>
           <div className="flex flex-col text-center w-full mb-12">
@@ -124,7 +117,7 @@ const Pricing = () => {
                         <FormControl>
                           <textarea
                             {...field}
-                            className="w-full text-sm bg-opacity-50 rounded border border-gray-300 focus:border-black-500 focus:bg-white focus:ring-2 focus:ring-black h-32  outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                            className="w-full text-sm bg-opacity-50 rounded-3xl border border-gray-300 focus:border-black-500 focus:bg-white focus:ring-2 focus:ring-black h-32  outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
                           />
                         </FormControl>
                       </FormItem>

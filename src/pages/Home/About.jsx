@@ -48,7 +48,7 @@ const About = () => {
                           cy={104}
                           r="1.66667"
                           transform="rotate(-90 1.66667 104)"
-                          fill="#3056D3"
+                          fill="#008000"
                         />
                         <circle
                           cx="16.3333"
@@ -573,7 +573,7 @@ const About = () => {
                           cy="1.66683"
                           r="1.66667"
                           transform="rotate(-90 74.6667 1.66683)"
-                          fill="#3056D3"
+                          fill="#008000"
                         />
                         <circle
                           cx={103}
