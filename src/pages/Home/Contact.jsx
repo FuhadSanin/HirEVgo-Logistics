@@ -6,7 +6,6 @@ import {
   FormItem,
   FormLabel,
   FormControl,
-  FormMessage,
 } from "../../components/ui/form"
 import { Input } from "../../components/ui/input"
 import { Button } from "../../components/ui/button"
@@ -60,7 +59,7 @@ const Contact = () => {
   return (
     <section
       id="Contact"
-      className="overflow-hidden pb-12 pt-12 md:px-24 px-10"
+      className="overflow-hidden pb-12 pt-12 md:px-24 px-10 bg-white dark:bg-black"
     >
       <div className="container md:px-5 py-14  mx-auto">
         <div className="flex flex-col text-center w-full mb-12">

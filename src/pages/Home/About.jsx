@@ -7,7 +7,7 @@ import GetQuota from "@pages/Pricing/GetQuota"
 const About = () => {
   return (
     <>
-      <section className="overflow-hidden pt-28 pb-12 md:px-24 px-10 lg:pt-[120px] lg:pb-[90px] bg-white dark:bg-dark">
+      <section className="overflow-hidden pt-28 pb-12 md:px-24 px-10 lg:pt-[120px] lg:pb-[90px] bg-white dark:bg-black">
         <div className="container mx-auto">
           <div className="flex flex-wrap items-center justify-between -mx-4">
             <div className="w-full px-4 lg:w-6/12">
@@ -612,7 +612,7 @@ const About = () => {
 
             <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
               <div className="mt-10 lg:mt-0 text-justify">
-                <h2 className="mb-5 text-3xl font-bold text-black  sm:text-[40px]/[48px]">
+                <h2 className="mb-5 text-3xl font-bold text-black dark:text-white sm:text-[40px]/[48px]">
                   Let’s move your Business forward together!
                 </h2>
                 <CardDescription className="mb-5 text-md">

@@ -37,7 +37,7 @@ const Navbar = () => {
         </div>
 
         {/* Contact Us Link */}
-        <div className="hidden lg:flex lg:gap-x-12">
+        <div className="hidden lg:flex lg:gap-x-12 text-black dark:text-white">
           {navigation.map(item => (
             <Link
               key={item.name}

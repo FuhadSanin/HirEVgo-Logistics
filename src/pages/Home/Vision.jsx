@@ -54,7 +54,7 @@ const Cards = ({ title, description, imgSrc: Icon }) => {
 
 const Vision = () => {
   return (
-    <section className="overflow-hidden h-fit pb-12 md:px-24 bg-white dark:bg-dark">
+    <section className="overflow-hidden h-fit pb-12 md:px-24 bg-white dark:bg-black">
       <div className="container mx-auto">
         <div className="flex-wrap flex items-center justify-between -mx-4 space-y-8">
           <div className="flex flex-row flex-wrap lg:w-1/2 md:w-full sm:justify-between justify-center gap-12">
