@@ -35,11 +35,11 @@ const GetQuota = () => {
   return (
     <Dialog>
       <DialogTrigger>
-        <Button className="w-full">Get Quota Now</Button>
+        <Button className="w-full">Get Quote Now</Button>
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle className="mb-3">Get Quota Now</DialogTitle>
+          <DialogTitle className="mb-3">Get Quote Now</DialogTitle>
           <DialogDescription>
             <Form {...form}>
               <form

@@ -1,9 +1,18 @@
 import React, { useState } from "react"
 import { List, Menu, X } from "lucide-react" // Ensure you import the Menu icon if you intend to use it
 import logo from "../assets/logo.png"
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet"
 
 const Navbar = () => {
+  const location = useLocation()
   const navigation = [
     { name: "Home", to: "" },
     { name: "Pricing", to: "pricing" },
@@ -19,21 +28,50 @@ const Navbar = () => {
         className="flex items-center justify-between p-3 lg:px-8"
       >
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
+          <Link to="/" className="-m-1.5 p-1.5">
             <img alt="Company Logo" src={logo} className="h-28 w-auto" />
-          </a>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
+        {location.pathname !== "/contact" && (
+          <div className="lg:hidden  text-black dark:text-white">
+            <Link to="/contact" className="text-md font-semibold leading-6">
+              Contact us
+            </Link>
+          </div>
+        )}
+
         <div className="flex lg:hidden">
-          <button
-            type="button"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 "
-          >
-            <span className="sr-only">Open main menu</span>
-            <Menu />
-          </button>
+          <Sheet>
+            <SheetTrigger>
+              <Menu />
+            </SheetTrigger>
+            <SheetContent>
+              <SheetHeader>
+                <SheetTitle>
+                  <Link to="/">
+                    <img
+                      alt="Company Logo"
+                      src={logo}
+                      className="h-28 w-auto"
+                    />
+                  </Link>
+                </SheetTitle>
+                <div className="flex flex-col text-left text-black dark:text-white">
+                  {navigation.map(item => (
+                    <Link
+                      key={item.name}
+                      to={item.to}
+                      className="text-xl font-semibold leading-loose"
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
+              </SheetHeader>
+            </SheetContent>
+          </Sheet>
         </div>
 
         {/* Contact Us Link */}

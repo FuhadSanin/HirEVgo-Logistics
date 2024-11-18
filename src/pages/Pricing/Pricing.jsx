@@ -92,8 +92,8 @@ const Pricing = () => {
   }
 
   return (
-    <section className="overflow-hidden pt-28 pb-12 lg:px-24 scroll-px-6 lg:pt-[120px] lg:pb-[90px] bg-white dark:bg-dark">
-      <div className="container mx-auto md:flex justify-between items-center space-x-6">
+    <section className="overflow-hidden pt-28 pb-12 px-4 lg:px-24 scroll-px-6 lg:pt-[120px] lg:pb-[90px] bg-white dark:bg-dark">
+      <div className="container mx-auto md:flex justify-between items-center md:space-x-6 lg:space-x-0">
         <div className="md:w-1/2 lg:1/2 flex items-center justify-center">
           <img src={pricing} alt="Pricing" className="w-[500px]" />
         </div>
@@ -227,7 +227,7 @@ const Pricing = () => {
                   />
                   {/* Submit Button */}
                   <div className="p-2 w-full mt-4">
-                    <Button type="submit">Generate Quota</Button>
+                    <Button type="submit">Generate Quote</Button>
                   </div>
                 </form>
               </Form>

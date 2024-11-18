@@ -2,12 +2,13 @@ import { CardDescription } from "@components/ui/card"
 import about1 from "../../assets/About/1.webp"
 import about2 from "../../assets/About/2.webp"
 import about3 from "../../assets/About/3.webp"
-import GetQuota from "@pages/Pricing/GetQuota"
+import { Button } from "@components/ui/button"
+import { Link } from "react-router-dom"
 
 const About = () => {
   return (
     <>
-      <section className="overflow-hidden pt-28 pb-12 md:px-24 px-10 lg:pt-[120px] lg:pb-[90px] bg-white dark:bg-black">
+      <section className="overflow-hidden pt-28 pb-12 md:px-24 px-10 lg:pt-[120px] lg:pb-[90px] bg-white ">
         <div className="container mx-auto">
           <div className="flex flex-wrap items-center justify-between -mx-4">
             <div className="w-full px-4 lg:w-6/12">
@@ -632,7 +633,9 @@ const About = () => {
                   while maintaining the highest standards of safety and
                   compliance.
                 </CardDescription>
-                <GetQuota />
+                <Link to="/pricing">
+                  <Button>Get Quote Now</Button>
+                </Link>
               </div>
             </div>
           </div>
