@@ -59,7 +59,7 @@ const Contact = () => {
   return (
     <section
       id="Contact"
-      className="overflow-hidden pb-12 pt-12 md:px-24 px-10 bg-white dark:bg-black"
+      className="overflow-hidden pb-12 pt-24 md:px-24 px-10 bg-white dark:bg-black"
     >
       <div className="container md:px-5 py-14  mx-auto">
         <div className="flex flex-col text-center w-full mb-12">

@@ -40,6 +40,7 @@ const CardDescription = React.forwardRef(({ className, ...props }, ref) => (
     ref={ref}
     className={cn("text-sm text-slate-500 dark:text-slate-400", className)}
     {...props}
+    style={{ fontFamily: "Raleway" }}
   />
 ))
 CardDescription.displayName = "CardDescription"
